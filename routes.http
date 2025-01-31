@@ -1,0 +1,46 @@
+POST http://localhost:3333/motos
+Content-Type: application/json
+
+{
+    "modelo": "Moto 01",
+    "marca": "Marca 01",
+    "cilindrada": 250,
+    "ano": 2022,
+    "preco": 15000,
+    "cor": "Vermelha"
+}
+
+###
+
+GET http://localhost:3333/motos
+
+###
+
+GET http://localhost:3333/motos?search=Honda
+
+###
+
+PUT http://localhost:3333/motos/e5f79c63-e7b6-42e5-b37f-bddadb5012aa
+Content-Type: application/json
+
+{
+    "modelo": "CB 500X",
+    "marca": "Honda",
+    "cilindrada": 500,
+    "ano": 2023,
+    "preco": 35000,
+    "cor": "Preta"
+}
+
+###
+
+DELETE http://localhost:3333/motos/Route PATCH:/88bdc563-002c-4aff-a129-4dc7b0f0ff6a not found
+
+###
+
+PATCH http://localhost:3333/motos/e5f79c63-e7b6-42e5-b37f-bddadb5012aa
+Content-Type: application/json 
+
+{
+    "preco": 32000
+}
